@@ -38,7 +38,7 @@ namespace Nuke.Common.BuildServers
         public string BuildWorkerImage => Variable("APPVEYOR_BUILD_WORKER_IMAGE");
         public int PullRequestNumber => Variable<int>("APPVEYOR_PULL_REQUEST_NUMBER");
         [CanBeNull] public string PullRequestTitle => Variable("APPVEYOR_PULL_REQUEST_TITLE");
-        [CanBeNull] public int? JobId => Variable<int?>("APPVEYOR_JOB_ID");
+        public string JobId => Variable("APPVEYOR_JOB_ID");
         [CanBeNull] public string JobName => Variable("APPVEYOR_JOB_NAME");
         public int JobNumber => Variable<int>("APPVEYOR_JOB_NUMBER");
         public string RepositoryProvider => Variable("APPVEYOR_REPO_PROVIDER");
