@@ -39,8 +39,8 @@ namespace Nuke.Common.BuildServers
         public int PullRequestNumber => Variable<int>("APPVEYOR_PULL_REQUEST_NUMBER");
         [CanBeNull] public string PullRequestTitle => Variable("APPVEYOR_PULL_REQUEST_TITLE");
         public string JobId => Variable("APPVEYOR_JOB_ID");
-        public string JobName => Variable("APPVEYOR_JOB_NAME");
-        public string JobNumber => Variable("APPVEYOR_JOB_NUMBER");
+        [CanBeNull] public string JobName => Variable("APPVEYOR_JOB_NAME");
+        public int JobNumber => Variable<int>("APPVEYOR_JOB_NUMBER");
         public string RepositoryProvider => Variable("APPVEYOR_REPO_PROVIDER");
         public string RepositoryScm => Variable("APPVEYOR_REPO_SCM");
         public string RepositoryName => Variable("APPVEYOR_REPO_NAME");
@@ -50,7 +50,7 @@ namespace Nuke.Common.BuildServers
         public string RepositoryCommitSha => Variable("APPVEYOR_REPO_COMMIT");
         public string RepositoryCommitAuthor => Variable("APPVEYOR_REPO_COMMIT_AUTHOR");
         public string RepositoryCommitAuthorEmail => Variable("APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL");
-        public string RepositoryCommitTimestamp => Variable("APPVEYOR_REPO_COMMIT_TIMESTAMP");
+        public DateTime RepositoryCommitTimestamp => Variable<DateTime>("APPVEYOR_REPO_COMMIT_TIMESTAMP");
         public string RepositoryCommitMessage => Variable("APPVEYOR_REPO_COMMIT_MESSAGE");
         [CanBeNull] public string RepositoryCommitMessageExtended => Variable("APPVEYOR_REPO_COMMIT_MESSAGE_EXTENDED");
         public bool ScheduledBuild => Variable<bool>("APPVEYOR_SCHEDULED_BUILD");
