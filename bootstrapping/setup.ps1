@@ -1,7 +1,7 @@
 [CmdletBinding()]
 Param()
 
-Set-StrictMode -Version 2.0; $ErrorActionPreference = "Stop"; $ConfirmPreference = "None"; trap { $host.SetShouldExit(1) }
+Set-StrictMode -Version 2.0; $ConfirmPreference = "None"; trap { $host.SetShouldExit(1) }
 $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent
 
 ###########################################################################
